@@ -1,0 +1,112 @@
+{
+	"list1": [{
+		"name": "精选"
+	}, {
+		"name": "美食"
+	}, {
+		"name": "居家日用"
+	}, {
+		"name": "女妆"
+	}, {
+		"name": "美妆"
+	}, {
+		"name": "数码家电"
+	}, {
+		"name": "鞋品"
+	}],
+	"list2": [
+		"https://cdn.uviewui.com/uview/swiper/swiper3.png",
+		"https://cdn.uviewui.com/uview/swiper/swiper2.png",
+		"https://cdn.uviewui.com/uview/swiper/swiper1.png"
+	],
+	"list3": [{
+		"name": "推荐"
+	}, {
+		"name": "会员/卡券"
+	}, {
+		"name": "会充"
+	}],
+	"list4": [{
+		"img": "../../static/c1.png",
+		"name": "淘宝"
+	}, {
+		"img": "../../static/c2.png",
+		"name": "京东"
+	}, {
+		"img": "../../static/c3.png",
+		"name": "拼多多"
+	}, {
+		"img": "../../static/c4.png",
+		"name": "抖音"
+	}, {
+		"img": ".. /../static/c5.png",
+		"name": "包邮"
+	}, {
+		"img": "../../static/c6.png",
+		"name": "每日半价"
+	}, {
+		"img": "../../static/c7.png",
+		"name": "唯品会"
+	}, {
+		"img": "../../static/c8.png",
+		"name": "腾讯视频"
+	}, {
+		"img": "../../static/c1.png",
+		"name": "爱奇艺"
+	}, {
+		"img": "../../static/c2.png",
+		"name": "优酷视频"
+	}, {
+		"img": "../../static/c3.png",
+		"name": "果TV"
+	}, {
+		"img": "../../static/c4.png",
+		"name": "喜马拉雅"
+	}, {
+		"img": "../../static/c5.png",
+		"name": "酷狗音乐"
+	}, {
+		"img": "../../static/c6.png",
+		"name": "酷我音乐"
+	}, {
+		"img": "../../static/c7.png",
+		"name": "QQ音乐"
+	}],
+	"list5": [{
+		"img": "../../static/c1.png",
+		"text1": "秒杀特效",
+		"text2": "全民享特价优惠",
+		"color1": "#ec47ad",
+		"bgColor": "#fdebeb"
+	}, {
+		"img": "../../static/c1.png",
+		"text1": "爆款推荐",
+		"text2": "超值好物优惠多多",
+		"color": "#5d8bc9",
+		"bgColor": "#e8f0fd"
+	}, {
+		"img": "../../static/c1.png",
+		"text1": "品牌直达",
+		"text2": "大厂优品折扣抢",
+		"color": "#f46239",
+		"bgColor": "#fbf4e2"
+	}, {
+		"img": "../../static/c1.png",
+		"text1": "每日上新",
+		"text2": "全民享特价优惠",
+		"color": "#f46239",
+		"bgColor": "#fbf4e2"
+	}, {
+		"img": "../../static/c1.png",
+		"text1": "安心优选",
+		"text2": "全民享特价优惠",
+		"color": "#889569",
+		"bgColor": "#eaf6de"
+	}, {
+		"img": "../../static/c1.png",
+		"text1": "发现好物",
+		"text2": "全民享特价优惠",
+		"color": "#cb5a78",
+		"bgColor": "#faf1ea"
+	}]
+}
