@@ -9,8 +9,8 @@
 			<!-- 选项卡 -->
 			<view class="tags">
 				<u-tabs :list="data.list1" @click="click" lineColor="white"
-					:activeStyle="{color: 'white',fontWeight: '700',fontSize:'16px'}" :inactiveStyle="{color: 'white'}"
-					itemStyle="padding:15rpx 20rpx"></u-tabs>
+					:activeStyle="{color: 'white',fontWeight: '700',fontSize:'26rpx'}"
+					:inactiveStyle="{color: 'white',fontSize:'24rpx'}" itemStyle="padding:15rpx 15rpx"></u-tabs>
 			</view>
 			<!-- 选项卡 -->
 		</view>
@@ -27,8 +27,8 @@
 			<view class="tags">
 				<view class="tags">
 					<u-tabs :list="data.list3" @click="click" lineColor="red"
-						:activeStyle="{color: 'red',fontWeight: '700',fontSize:'16px'}"
-						:inactiveStyle="{color: 'black'}" itemStyle="padding:15rpx 20rpx"></u-tabs>
+						:activeStyle="{color: 'red',fontWeight: '700',fontSize:'26rpx'}"
+						:inactiveStyle="{color: 'black',fontSize:'24rpx'}" itemStyle="padding:15rpx 15rpx"></u-tabs>
 				</view>
 			</view>
 			<!-- 选项卡 -->
@@ -42,9 +42,10 @@
 			<!-- 15个图标 -->
 			<!-- 大卡片 -->
 			<view class="bigCars">
-				<view class="item" v-for="(item,index) in data.list5" :key="index">
+				<view class="item" v-for="(item,index) in data.list5" :key="index"
+					:style="{backgroundColor: item.bgColor}">
 					<view>
-						<text>{{item.text1}}</text>
+						<text :style="{color:item.color}">{{item.text1}}</text>
 						<text>{{item.text2}}</text>
 					</view>
 					<view><img :src="item.img" alt=""></view>
@@ -92,6 +93,7 @@
 			input {
 				background-color: white;
 				height: 60rpx;
+				font-size: 26rpx;
 				text-indent: 60rpx;
 				border-radius: 30rpx;
 			}
@@ -134,6 +136,7 @@
 				margin: 10rpx 5rpx;
 				text-align: center;
 				padding-top: 20rpx;
+				font-size: 24rpx;
 			}
 
 			img {
@@ -147,24 +150,25 @@
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
-			padding-top: 40rpx;
+			padding: 30rpx 0;
 			background-color: #00bbff;
 
 			.item {
 				width: 30%;
 				margin: 10rpx 10rpx;
-				padding-top: 20rpx;
-				background-color: white;
+				padding-bottom: 20rpx;
+				border-radius: 12px;
 
 				view:first-child {
-					margin: 0;
+					margin: 20rpx 0 20rpx 10rpx;
 
 					text {
 						display: block;
+						font-size: 24rpx
 					}
 
 					text:first-child {
-						font-size: 35rpx;
+						font-size: 38rpx;
 					}
 				}
 
@@ -174,8 +178,8 @@
 			}
 
 			img {
-				width: 160rpx;
-				height: 160rpx;
+				width: 140rpx;
+				height: 140rpx;
 				background-color: #0252ff;
 			}
 		}

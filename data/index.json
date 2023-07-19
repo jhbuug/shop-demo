@@ -76,12 +76,13 @@
 		"img": "../../static/c1.png",
 		"text1": "秒杀特效",
 		"text2": "全民享特价优惠",
+		"color": "#dd4aa2",
 		"color1": "#ec47ad",
 		"bgColor": "#fdebeb"
 	}, {
 		"img": "../../static/c1.png",
 		"text1": "爆款推荐",
-		"text2": "超值好物优惠多多",
+		"text2": "超值好物优惠多",
 		"color": "#5d8bc9",
 		"bgColor": "#e8f0fd"
 	}, {
