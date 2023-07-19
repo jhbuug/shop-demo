@@ -29,7 +29,16 @@
 			"navigationStyle": "custom"
 		}
 
-	}],
+	}    ,{
+            "path" : "pages/index/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
