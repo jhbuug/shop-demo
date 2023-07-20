@@ -29,16 +29,22 @@
 			"navigationStyle": "custom"
 		}
 
-	}    ,{
-            "path" : "pages/index/detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	}, {
+		"path": "pages/index/detail",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/index/search",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false,
+			"navigationStyle": "custom"
+		}
+
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

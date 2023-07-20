@@ -74,10 +74,9 @@
 	}],
 	"list5": [{
 		"img": "../../static/icon/shoutibao.png",
-		"text1": "秒杀特效",
+		"text1": "秒杀特价",
 		"text2": "全民享特价优惠",
 		"color": "#dd4aa2",
-		"color1": "#ec47ad",
 		"bgColor": "#fdebeb"
 	}, {
 		"img": "../../static/icon/shoutibao.png",

@@ -4,11 +4,12 @@
 		<view class="header">
 			<view class="ztl">状态栏</view>
 			<view class="inp">
-				<input type="text" placeholder="请输入关键字">
+				<img src="../../static/icon/sousuo.png" alt="">
+				<input type="text" placeholder="请输入关键字" @click="toSearch">
 			</view>
 			<!-- 选项卡 -->
 			<view class="tags">
-				<u-tabs :list="data.list1" @click="headclick" lineColor="white"
+				<u-tabs :list="data.list1" @click="headTagsClick" lineColor="white"
 					:activeStyle="{color: 'white',fontWeight: '700',fontSize:'26rpx'}"
 					:inactiveStyle="{color: 'white',fontSize:'24rpx'}" itemStyle="padding:15rpx 15rpx"></u-tabs>
 			</view>
@@ -30,33 +31,38 @@
 		<view class="main" v-show="onOffMain">
 			<!-- 选项卡 -->
 			<view class="tags">
-				<view class="tags">
-					<u-tabs :list="data.list3" @click="click" lineColor="red"
-						:activeStyle="{color: 'red',fontWeight: '700',fontSize:'26rpx'}"
-						:inactiveStyle="{color: 'black',fontSize:'24rpx'}" itemStyle="padding:15rpx 15rpx"></u-tabs>
-				</view>
+				<u-tabs :list="data.list3" @click="mainTagsClick" lineColor="red"
+					:activeStyle="{color: 'red',fontWeight: '700',fontSize:'26rpx'}"
+					:inactiveStyle="{color: 'black',fontSize:'24rpx'}" itemStyle="padding:15rpx 15rpx"></u-tabs>
 			</view>
 			<!-- 选项卡 -->
-			<!-- 15个图标 -->
-			<view class="cars">
-				<view class="item" v-for="(item,index) in data.list4" :key="index">
-					<img :src="item.img" alt="">
-					<view>{{item.name}}</view>
-				</view>
+			<!-- maintags选项卡内容切换 -->
+			<view class="mainTagsContent" v-show="onOffMainTags">
+				<text>{{mainContent}}</text>
 			</view>
-			<!-- 15个图标 -->
-			<!-- 大卡片 -->
-			<view class="bigCars">
-				<view class="item" v-for="(item,index) in data.list5" :key="index"
-					:style="{backgroundColor: item.bgColor}">
-					<view>
-						<text :style="{color:item.color}">{{item.text1}}</text>
-						<text>{{item.text2}}</text>
+			<!-- maintags选项卡内容切换 -->
+			<view class="maincontent" v-show="onOffMainContent">
+				<!-- 15个图标 -->
+				<view class="cars">
+					<view class="item" v-for="(item,index) in data.list4" :key="index" @click="toDetail(item)">
+						<img :src="item.img" alt="">
+						<view>{{item.name}}</view>
 					</view>
-					<view><img :src="item.img" alt=""></view>
 				</view>
+				<!-- 15个图标 -->
+				<!-- 大卡片 -->
+				<view class="bigCars">
+					<view class="item" v-for="(item,index) in data.list5" :key="index" @click="toDetail(item)"
+						:style="{backgroundColor: item.bgColor}">
+						<view>
+							<text :style="{color:item.color}">{{item.text1}}</text>
+							<text>{{item.text2}}</text>
+						</view>
+						<view><img :src="item.img" alt=""></view>
+					</view>
+				</view>
+				<!-- 大卡片 -->
 			</view>
-			<!-- 大卡片 -->
 		</view>
 		<!-- 主体内容 -->
 	</view>
@@ -64,7 +70,6 @@
 
 <script>
 	import JsonData from "../../data/index.json"
-	// console.log(JsonData.list1)
 	export default {
 		data() {
 			return {
@@ -72,11 +77,14 @@
 				onOffBanner: true,
 				onOffMain: true,
 				onOffTags: false,
-				content: ""
+				onOffMainContent: true,
+				onOffMainTags: false,
+				content: "",
+				mainContent: "",
 			}
 		},
 		methods: {
-			headclick(item) {
+			headTagsClick(item) {
 				console.log(item)
 				if (item.index != 0) {
 					this.onOffBanner = false
@@ -92,6 +100,29 @@
 				} else {
 					this.onOffTags = true
 				}
+			},
+			mainTagsClick(item) {
+				console.log(item.name)
+				if (item.index != 0) {
+					this.onOffMainContent = false
+					this.onOffMainTags = true
+					console.log(this)
+				} else {
+					this.onOffMainContent = true
+					this.onOffMainTags = false
+				}
+				this.mainContent = item.name + "内容"
+			},
+			toSearch() {
+				uni.navigateTo({
+					url: "/pages/index/search"
+				})
+			},
+			toDetail(item) {
+				console.log(item)
+				uni.navigateTo({
+					url: '/pages/index/detail?info=' + encodeURIComponent(JSON.stringify(item))
+				})
 			}
 		}
 	}
@@ -101,7 +132,7 @@
 	.container {
 		background-image: linear-gradient(to right, #0252ff, #00bbff);
 		border-radius: 0 0 100rpx 100rpx;
-		background-size: cover;
+		// background-size: cover;
 		height: 400rpx;
 
 		.header {
@@ -113,7 +144,16 @@
 			}
 
 			.inp {
-				padding: 20rpx 20rpx 0;
+				margin: 20rpx 20rpx 0;
+				position: relative;
+
+				img {
+					position: absolute;
+					width: 40rpx;
+					height: 40rpx;
+					top: 10rpx;
+					left: 10rpx;
+				}
 
 				input {
 					background-color: white;
@@ -132,6 +172,15 @@
 
 		.headerTagsContent {
 			color: white;
+			text-align: center;
+			height: 150rpx;
+			line-height: 150rpx;
+			width: 90%;
+			margin: 20rpx auto 0;
+		}
+
+		.mainTagsContent {
+			color: black;
 			text-align: center;
 			height: 150rpx;
 			line-height: 150rpx;
@@ -180,7 +229,7 @@
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
-				padding: 30rpx 0;
+				padding: 30rpx 0 120rpx;
 
 				.item {
 					width: 30%;
