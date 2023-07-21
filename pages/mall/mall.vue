@@ -30,6 +30,22 @@
 			<u-swiper :list="data.list7" bgColor="transparent" radius="12" height="100%"></u-swiper>
 		</view>
 		<!-- 轮播图 -->
+		<!-- 商品 -->
+		<view class="goods">
+			<view class="item" v-for="(item,index) in data.list8" :key="index" @click="toDetail(item)">
+				<image :src="item.imgUrls[0]" mode=""></image>
+				<text class="title"><img src="../../static/icon/tianmao.png" alt="">{{item.title}}</text>
+				<view class="LR">
+					<text class="price">￥{{item.price}}.00</text><text class="xL">{{item.xiaoLiang}}人付款</text>
+				</view>
+				<view class="text">
+					<text>{{item.text1}}</text>
+					<text>{{item.text2}}</text>
+				</view>
+				<text class="shopName">{{item.shopName}}</text>
+			</view>
+		</view>
+		<!-- 商品 -->
 		<!-- 主体内容 -->
 	</view>
 </template>
@@ -48,6 +64,12 @@
 					url: "/pages/index/search"
 				})
 			},
+			toDetail(item) {
+				console.log(item)
+				uni.navigateTo({
+					url: '/pages/mall/detail?info=' + encodeURIComponent(JSON.stringify(item))
+				})
+			}
 		}
 	}
 </script>
@@ -118,6 +140,78 @@
 			margin: 20rpx auto;
 			border-radius: 12px;
 			overflow: hidden;
+		}
+
+		.goods {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			.item {
+				width: 45%;
+				margin: 20rpx 10rpx;
+
+				.shopName {
+					font-size: 30rpx;
+					padding-top: 5rpx;
+				}
+
+				.text {
+					display: flex;
+					padding: 5rpx 0;
+
+					text {
+						font-size: 26rpx;
+						border: 1px solid #e45304;
+						border-radius: 3px;
+						text-align: center;
+						box-sizing: border-box;
+						padding: 4rpx;
+					}
+
+					text:first-child {
+						margin-right: 20rpx;
+					}
+				}
+
+				text {
+					display: block;
+
+					img {
+						height: 28rpx;
+					}
+				}
+
+				.title {
+					overflow: hidden;
+					-webkit-line-clamp: 2;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					font-size: 30rpx;
+					font-weight: 700;
+					padding: 5rpx 0;
+				}
+
+				.LR {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 5rpx 0;
+					color: #e45304;
+					font-weight: 700;
+
+					text:last-child {
+						font-size: 26rpx;
+						color: #aaa;
+					}
+				}
+
+				image {
+					width: 100%;
+					border-radius: 12px;
+				}
+			}
 		}
 	}
 </style>

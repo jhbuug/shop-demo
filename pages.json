@@ -44,6 +44,14 @@
 			"navigationStyle": "custom"
 		}
 
+	}, {
+		"path": "pages/mall/detail",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false,
+			"navigationStyle": "custom"
+		}
+
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

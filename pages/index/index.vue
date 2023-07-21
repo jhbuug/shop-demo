@@ -172,6 +172,7 @@
 
 		.headerTagsContent {
 			color: white;
+			font-size: 40rpx;
 			text-align: center;
 			height: 150rpx;
 			line-height: 150rpx;
@@ -180,6 +181,7 @@
 		}
 
 		.mainTagsContent {
+			font-size: 40rpx;
 			color: black;
 			text-align: center;
 			height: 150rpx;
