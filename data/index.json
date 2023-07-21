@@ -108,5 +108,29 @@
 		"text2": "全民享特价优惠",
 		"color": "#cb5a78",
 		"bgColor": "#faf1ea"
-	}]
+	}],
+	"list6": [{
+		"name": "精选"
+	}, {
+		"name": "日用百货"
+	}, {
+		"name": "证件玉石"
+	}, {
+		"name": "潮流男装"
+	}, {
+		"name": "气质女装"
+	}, {
+		"name": "手机数码"
+	}, {
+		"name": "文化"
+	}, {
+		"name": "财经"
+	}, {
+		"name": "手工"
+	}],
+	"list7": [
+		"https://cdn.uviewui.com/uview/swiper/swiper3.png",
+		"https://cdn.uviewui.com/uview/swiper/swiper2.png",
+		"https://cdn.uviewui.com/uview/swiper/swiper1.png"
+	]
 }

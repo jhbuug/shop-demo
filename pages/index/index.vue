@@ -2,7 +2,7 @@
 	<view class="container">
 		<!-- 头部 -->
 		<view class="header">
-			<view class="ztl">状态栏</view>
+			<!-- <view class="ztl">状态栏</view> -->
 			<view class="inp">
 				<img src="../../static/icon/sousuo.png" alt="">
 				<input type="text" placeholder="请输入关键字" @click="toSearch">
@@ -132,27 +132,27 @@
 	.container {
 		background-image: linear-gradient(to right, #0252ff, #00bbff);
 		border-radius: 0 0 100rpx 100rpx;
-		// background-size: cover;
+		background-size: cover;
 		height: 400rpx;
 
 		.header {
-			.ztl {
-				height: 45rpx;
-				line-height: 45rpx;
-				color: white;
-				text-align: center;
-			}
+			// .ztl {
+			// 	height: 45rpx;
+			// 	line-height: 45rpx;
+			// 	color: white;
+			// 	text-align: center;
+			// }
 
 			.inp {
-				margin: 20rpx 20rpx 0;
+				padding: 60rpx 20rpx 0;
 				position: relative;
 
 				img {
 					position: absolute;
 					width: 40rpx;
 					height: 40rpx;
-					top: 10rpx;
-					left: 10rpx;
+					top: 70rpx;
+					left: 30rpx;
 				}
 
 				input {
