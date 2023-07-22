@@ -28,6 +28,7 @@
 <style lang="less">
 	.container {
 		view {
+			margin-top: 100rpx;
 			text-align: center;
 		}
 	}

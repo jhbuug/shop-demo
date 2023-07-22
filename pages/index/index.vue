@@ -201,20 +201,26 @@
 		}
 
 		.main {
+			overflow: hidden;
+
 			.tags {
 				padding-left: 10rpx;
 			}
 
 			.cars {
-				width: 100%;
+				// width: 100%;
 				display: flex;
-				justify-content: center;
+				justify-content: space-between;
 				flex-wrap: wrap;
-				padding: 20rpx 0;
+				margin: 20rpx 20rpx;
+				padding: 10rpx 0;
+				background-color: white;
+				border-radius: 12px;
 
 				.item {
+					border-radius: 12px;
 					width: 18%;
-					margin: 10rpx 5rpx;
+					margin: 5rpx;
 					text-align: center;
 					padding-top: 20rpx;
 					font-size: 24rpx;
@@ -231,7 +237,7 @@
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
-				padding: 30rpx 0 120rpx;
+				margin-bottom: 100rpx;
 
 				.item {
 					width: 30%;
