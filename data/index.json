@@ -211,5 +211,30 @@
 			"https://gw.alicdn.com/imgextra/i2/1714128138/O1CN01aGBfUE29zFzRQUIuS_!!1714128138.jpg_Q75.jpg_.webp",
 			"https://gw.alicdn.com/imgextra/i4/1714128138/O1CN01LGrpgq29zG2DeV2fw_!!1714128138.jpg_Q75.jpg_.webp"
 		]
-	}]
+	}],
+	"options": [{
+		"icon": "chat",
+		"text": "客服"
+	}, {
+		"icon": "shop",
+		"text": "店铺",
+		"info": 2,
+		"infoBackgroundColor": "#007aff",
+		"infoColor": "# f5f5f5 "
+	}, {
+		"icon": "cart",
+		"text": "购物车",
+		"info": 2
+	}],
+	"buttonGroup": [{
+			"text": "加入购物车",
+			"backgroundColor": "linear-gradient(90deg, #FFCD1E, #FF8A18)",
+			"color": "#fff"
+		},
+		{
+			"text": "立即购买",
+			"backgroundColor": "linear-gradient(90deg, #FE6035, #EF1224)",
+			"color": "#fff"
+		}
+	]
 }

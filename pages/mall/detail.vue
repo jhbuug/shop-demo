@@ -27,14 +27,24 @@
 			</view>
 		</view>
 		<!-- 主体内容 -->
+		<!-- 底部导航栏 -->
+		<view class="goods-carts">
+			<uni-goods-nav :options="data.options" :fill="true" :button-group="data.buttonGroup" @click="onClick"
+				@buttonClick="buttonClick" />
+		</view>
+		<!-- 底部导航栏 -->
 	</view>
 </template>
 
 <script>
+	import JsonData from "../../data/index.json"
 	export default {
+		components: {},
 		data() {
 			return {
+				data: JsonData,
 				info: {},
+				cartinfo: JsonData.options[2].info,
 				currentNum: 0
 			}
 		},
@@ -48,6 +58,20 @@
 				uni.navigateBack({
 					delta: 1
 				});
+			},
+			onClick(e) {
+				console.log(e)
+			},
+			buttonClick(e) {
+				if (e.index) { //购买
+
+				} else { //加入购物车
+					console.log(e)
+					this.cartinfo++
+					JsonData.options[2].info = this.cartinfo;
+					console.log(JsonData.options[2].info)
+				}
+
 			}
 		}
 	}
@@ -150,5 +174,20 @@
 			color: #FFFFFF;
 			font-size: 12px;
 		}
+	}
+
+	.goods-carts {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: column;
+		position: fixed;
+		left: 0;
+		right: 0;
+		/* #ifdef H5 */
+		left: var(--window-left);
+		right: var(--window-right);
+		/* #endif */
+		bottom: 0;
 	}
 </style>
