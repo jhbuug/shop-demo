@@ -61,9 +61,14 @@
 			},
 			onClick(e) {
 				console.log(e)
+				if (e.index == 2) {
+					uni.switchTab({
+						url: '/pages/shoppingTrolley/shoppingTrolley'
+					})
+				}
 			},
 			buttonClick(e) {
-				if (e.index) { //购买
+				if (e.index) { //立即购买
 
 				} else { //加入购物车
 					console.log(e)
@@ -78,6 +83,10 @@
 </script>
 
 <style lang="scss">
+	.container {
+		padding-bottom: 100rpx;
+	}
+
 	.banner {
 		height: 550px;
 	}
@@ -134,7 +143,7 @@
 	}
 
 	.back {
-		position: absolute;
+		position: fixed;
 		left: 10rpx;
 		top: 10rpx;
 		z-index: 10;

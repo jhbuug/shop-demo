@@ -218,13 +218,13 @@
 	}, {
 		"icon": "shop",
 		"text": "店铺",
-		"info": 2,
+		"info": 0,
 		"infoBackgroundColor": "#007aff",
 		"infoColor": "# f5f5f5 "
 	}, {
 		"icon": "cart",
 		"text": "购物车",
-		"info": 2
+		"info": 0
 	}],
 	"buttonGroup": [{
 			"text": "加入购物车",
