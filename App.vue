@@ -1,3 +1,11 @@
+<script>
+	export default {
+		onLaunch: function() {
+			var topBar = uni.getSystemInfoSync()
+			console.log(topBar)
+		}
+	}
+</script>
 <style lang="scss">
 	@import "@/uni_modules/uview-ui/index.scss";
 

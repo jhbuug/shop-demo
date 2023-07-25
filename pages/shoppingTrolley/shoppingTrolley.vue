@@ -19,7 +19,7 @@
 						<image :src="item.goodsImage" style="width: 150rpx;height: 140rpx;"></image>
 					</view>
 					<view class="size">
-						<text style="font-size: 25rpx;">尺码：{{item.size}}</text>
+						<text style="font-size: 25rpx;">{{item.name}}</text>
 						<text class="goods-price">￥{{item.price}}/件</text>
 					</view>
 				</view>
@@ -44,8 +44,6 @@
 			<view class="end-right">
 				结算({{totalNum}})
 			</view>
-
-
 		</view>
 	</view>
 </template>
@@ -58,44 +56,45 @@
 				allchecked: true,
 				checked: true,
 				goods: [{
-						size: "女款-M",
+						name: "荣耀X50 新品5G智能手机",
 						num: 1,
 						flag: true,
-						price: 149,
-						goodsImage: "https://img0.baidu.com/it/u=4158246207,3235707994&fm=26&fmt=auto&gp=0.jpg",
+						price: 1399,
+						goodsImage: "https://gw.alicdn.com/imgextra/i1/1114511827/O1CN01XPvHYS1PMoTPyOw9e_!!1114511827.jpg_Q75.jpg_.webp",
 					},
 					{
-						size: "女款-xs",
+						name: "vivo iQOO Neo8新品手机",
 						num: 1,
 						flag: true,
-						price: 219,
-						goodsImage: "https://img0.baidu.com/it/u=811765333,1656843554&fm=11&fmt=auto&gp=0.jpg",
+						price: 1399,
+						goodsImage: "https://gw.alicdn.com/imgextra/i1/883737303/O1CN016sXgUz23opKKMzxod_!!883737303.jpg_Q75.jpg_.webp",
 					},
 					{
-						size: "女款-L",
+						name: "Redmi Note 12T Pro",
 						num: 1,
 						flag: true,
-						price: 240,
-						goodsImage: "https://img1.baidu.com/it/u=233755383,2522308225&fm=26&fmt=auto&gp=0.jpg",
+						price: 1499,
+						goodsImage: "https://gw.alicdn.com/imgextra/i1/1714128138/O1CN01ToCphR29zG2Vc4pfv_!!1714128138.jpg_Q75.jpg_.webp",
 					},
 					{
-						size: "女款-XXL",
+						name: "OPPO Reno10 5G 新款",
 						num: 1,
 						flag: true,
-						price: 410,
-						goodsImage: "https://img0.baidu.com/it/u=3894000947,2570065196&fm=26&fmt=auto&gp=0.jpg",
+						price: 2399,
+						goodsImage: "https://gw.alicdn.com/bao/uploaded/i2/901409638/O1CN01tWqE5v2L4G8tFIg9S-901409638.jpg_Q75.jpg_.webp",
 					},
 					{
-						size: "女款-XXL",
+						name: "Redmi K60手机红米k60",
 						num: 1,
 						flag: true,
-						price: 500,
-						goodsImage: "https://img2.baidu.com/it/u=1001625387,3275765924&fm=26&fmt=auto&gp=0.jpg",
+						price: 2199,
+						goodsImage: "https://gw.alicdn.com/imgextra/i1/1714128138/O1CN01W1uBV829zG2kkyFin_!!1714128138.jpg_Q75.jpg_.webp",
 					},
 				],
 			}
 		},
 		methods: {
+
 			goshopping() {
 				uni.switchTab({
 					url: '/pages/mall/mall'
