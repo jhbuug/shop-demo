@@ -17,8 +17,8 @@
 		"path": "pages/shoppingTrolley/shoppingTrolley",
 		"style": {
 			"navigationBarTitleText": "购物车",
-			"enablePullDownRefresh": false,
-			"navigationStyle": "custom"
+			"enablePullDownRefresh": false
+			// "navigationStyle": "custom"
 		}
 
 	}, {
