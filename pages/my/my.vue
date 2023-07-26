@@ -68,7 +68,7 @@
 			</view>
 			<view class="my">
 				<view class="up">
-					<view class="item">我的订单</view>
+					<view class="item">我的服务</view>
 				</view>
 				<view class="down">
 					<view class="item">
